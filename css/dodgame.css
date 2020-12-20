@@ -1,0 +1,273 @@
+html,
+body,
+#wrapper,
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+#wrapper,
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 950px;
+    height: 100%;
+}
+
+.css-MwOxYo {
+    width: 550px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px grey, -1px -1px 5px grey;
+    padding: 15px;
+}
+
+/* Tiêu đề */
+
+.css-xljkLd {
+    padding: 5px;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.css-xljkLd__title {
+    color: #d54040;
+}
+
+/* Nút chọn cho máy đi trước */
+.css-oVImrc {
+    margin-bottom: 1rem;
+}
+.btn__machine-first {
+    margin: auto;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    background: #7ed3c0;
+    color: #373939;
+}
+.btn__machine-first:active {
+    box-shadow: 1px 1px 5px #e6dada, -1px -1px 5px #e6dada;
+}
+
+/*Style cho bàn cờ*/
+
+.css-QddU9Q {}
+
+.css-QddU9Q__chessboard {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.css-QddU9Q__chessboard,
+.css-QddU9Q__chessboard tr,
+.css-QddU9Q__chessboard td {
+    border: 2px solid #2d978b;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.css-QddU9Q__chessboard td {
+    width: 122px;
+    height: 122px;
+    position: relative;
+}
+
+
+/*Ô cờ*/
+
+.chess_box {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes chessPOutTop {
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes chessPOutRight {
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.chess_box.active-chessP-out {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.chess_box.active-chessP-out-right {
+    animation-name: chessPOutRight;
+}
+
+.chess_box.active-chessP-out-top {
+    animation-name: chessPOutTop;
+}
+
+.chessBox-hover {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    border: none!important;
+}
+
+.chessBox-hover:hover .chess_pieces {
+    top: calc(100%/2 - 40px/2);
+    left: calc(100%/2 - 40px/2);
+    width: 40px;
+    height: 40px;
+}
+
+.chessBox-center {
+    height: 100%;
+    display: grid;
+    align-content: space-between;
+}
+
+
+/*Quân cờ*/
+
+.chess_pieces {
+    position: absolute;
+    top: calc(100%/2 - 80px/2);
+    left: calc(100%/2 - 80px/2);
+    margin: auto;
+    border-radius: 50%;
+    transition: 0.15s;
+    width: 80px;
+    height: 80px;
+}
+
+.black_chess_pieces {
+    border: 1px solid #3e3e3e;
+    background: #3e3e3e;
+}
+
+.red_chess_pieces {
+    border: 1px solid #a72a2a;
+    background: #a72a2a;
+}
+
+
+/*Điều hướng quân cờ*/
+
+.navigate_chess_pieces {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #c7c7c7;
+    display: none;
+}
+
+.chessBox-hover:hover .navigate_chess_pieces {
+    display: block;
+    opacity: 0;
+}
+
+.chessBox-hover .navigate_chess_pieces.active {
+    display: block;
+    opacity: 1;
+}
+
+.nvp__top::before {
+    content: "\f106";
+}
+
+.nvp__right::before {
+    content: "\f105";
+}
+
+.nvp__bottom::before {
+    content: "\f107";
+}
+
+.nvp__left::before {
+    content: "\f104";
+}
+
+.navigate_chess_pieces:hover::before {
+    color: #464343;
+}
+
+/* Hiển thị thông báo khi kết thúc trò chơi */
+.css-DVb7j7.game-result {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(220 220 220 / 50%);
+}
+.gr__part-picture {
+    margin: 50px 0 70px;
+}
+.css-sG2GHL {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+.css-sG2GHL img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 1px 1px 7px #827b7b, -1px -1px 7px #827b7b;
+}
+.gr__section-text {
+    background: #2d546b;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px white, -1px -1px 5px white;
+    margin-bottom: 25px;
+}
+
+.gr__section-text h3.css-jpvAVi {
+    text-align: center;
+    font-size: 3rem;
+    padding: 10px;
+    font-style: italic;
+    color: #ffefef;
+}
+
+/* Nút reset */
+.dodgame-refresh-btn {
+    display: block;
+    margin: auto;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    background: #39afba;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.dodgame-refresh-btn:active {
+    box-shadow: 1px 1px 5px grey, -1px -1px 5px grey;
+}

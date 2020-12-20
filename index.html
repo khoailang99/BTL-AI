@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/dodgame.css">
+	<link rel="stylesheet" type="text/css" href="./FontAwesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="./FontAwesome/css/fontawesome.min.css">
+	<script src="./FontAwesome/js/fontawesome.min.js"></script>
+</head>
+<body>
+	
+	<div id="wrapper">
+		<div class="container">
+			
+			<div class="css-MwOxYo">
+				<!-- Tiêu đề -->
+				<div class="css-xljkLd">
+					<h3 class="css-xljkLd__title"> Trò chơi DodGame</h3>
+				</div>
+
+				<!-- Nút chọn máy đi trước -->
+				<div class="css-oVImrc">
+					<button class="css-nYimAv btn__machine-first"> Máy đi trước </button>
+				</div>
+
+				<div class="css-QddU9Q">
+					<div class="css-nXr1CZ" style="display: none;">
+						<div class="chess_box chessBox-hover">
+							<div class="chessBox-lcr chessBox-left">
+								<div class="navigate_chess_pieces nvp__left" data-direction="left"></div>
+							</div>
+							<div class="chessBox-lcr chessBox-center">
+								<div class="navigate_chess_pieces nvp__top" data-direction="top"></div>
+								<div class="chess_pieces black_chess_pieces"></div>
+								<div class="navigate_chess_pieces nvp__bottom" data-direction="bottom"></div>
+							</div>
+							<div class="chessBox-lcr chessBox-right">
+								<div class="navigate_chess_pieces nvp__right" data-direction="right"></div>
+							</div>
+						</div>
+					</div>
+					<table class="css-QddU9Q__chessboard">
+						<tbody class="chessboard__tbody">
+						</tbody>
+					</table>
+				</div>
+				<div class="css-DVb7j7 game-result">
+					<div class="css-bLtDiO gr__part-picture">
+						<div class="css-sG2GHL">
+							<img src="./images/victory.gif" alt="">
+						</div>
+					</div>
+					<div class="css-yOSnJF gr__section-text">
+						<h3 class="css-jpvAVi"> Hòa </h3>
+					</div>
+
+					<div class="css-WkPpmc">
+						<button class="dodgame-refresh-btn" onClick="document.location.reload(true)">Làm mới</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/Dodgame.js" defer></script>
+</body>
+</html>
